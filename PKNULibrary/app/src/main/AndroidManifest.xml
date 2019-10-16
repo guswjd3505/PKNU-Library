@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BeaActivity"></activity>
+        <activity android:name=".NoActivity"></activity>
+        <activity android:name=".SetActivity" />
+        <activity android:name=".BeaActivity" />
         <activity android:name=".MyPageActivity" />
         <activity android:name=".ResActivity" />
         <activity android:name=".LoginActivity" />

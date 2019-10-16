@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void onclick4(View v) {
-        Intent intent = new Intent(MainActivity.this, BeaActivity.class);
+        Intent intent = new Intent(MainActivity.this, NoActivity.class);
         startActivity(intent);
     }
     public void onclick5(View v){
-        Intent intent = new Intent(MainActivity.this, BeaActivity.class);
+        Intent intent = new Intent(MainActivity.this, SetActivity.class);
         startActivity(intent);
     }
 }
