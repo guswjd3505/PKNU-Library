@@ -9,12 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NoActivity"></activity>
+        <activity android:name=".five"></activity>
+        <activity android:name=".four" />
+        <activity android:name=".three" />
+        <activity android:name=".oneB" />
+        <activity android:name=".oneA" />
+        <activity android:name=".NoActivity" />
         <activity android:name=".SetActivity" />
         <activity android:name=".BeaActivity" />
-        <activity android:name=".MyPageActivity" />
         <activity android:name=".ResActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".MyPageActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
     </application>
 

@@ -1,3 +1,4 @@
+
 package com.example.pknulibrary;
 
 import android.app.Activity;
@@ -6,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
 
 public class LoginActivity extends Activity {
 
@@ -21,11 +23,13 @@ public class LoginActivity extends Activity {
         button.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
 
 }
+
+
+

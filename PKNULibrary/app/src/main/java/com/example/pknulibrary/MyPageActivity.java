@@ -15,8 +15,11 @@ public class MyPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_page);
 
-        textView=findViewById(R.id.textView);
+        textView=findViewById(R.id.date);
 
+        Intent intent=getIntent();
+        String name=intent.getStringExtra("name");
+        textView.setText(name);
     }
 
 }

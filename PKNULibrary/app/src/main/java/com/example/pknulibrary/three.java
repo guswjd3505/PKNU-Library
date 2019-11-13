@@ -1,14 +1,14 @@
 package com.example.pknulibrary;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SetActivity extends AppCompatActivity {
+import android.os.Bundle;
+
+public class three extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_set);
+        setContentView(R.layout.activity_three);
     }
 }

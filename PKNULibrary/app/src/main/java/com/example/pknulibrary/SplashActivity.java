@@ -1,8 +1,8 @@
 package com.example.pknulibrary;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.os.Handler;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
 
 public class SplashActivity extends MainActivity{
 

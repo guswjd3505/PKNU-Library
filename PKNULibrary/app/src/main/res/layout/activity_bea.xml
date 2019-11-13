@@ -6,48 +6,4 @@
     android:layout_height="match_parent"
     tools:context=".BeaActivity">
 
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="410dp"
-        android:layout_height="70dp"
-        android:background="#02146A"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Beacon 연결"
-        app:titleMargin="5dp"
-        app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-    <Button
-        android:id="@+id/btn_bea"
-        android:layout_width="249dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="140dp"
-        android:text="연결"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="290dp"
-        android:layout_height="256dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/beacon"
-        tools:layout_editor_absoluteY="96dp" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:text="블루투스 연결을 켠 후에 비콘에 연결해 주세요. 블루투스 기능을 켜지 않으면 비콘에 연결할 수 없습니다."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_bea" />
 </androidx.constraintlayout.widget.ConstraintLayout>

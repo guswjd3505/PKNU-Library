@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pknulibrary" />
+        app:srcCompat="@drawable/splash_img" />
 
     <TextView
         android:id="@+id/textView"

@@ -6,204 +6,117 @@
     android:layout_height="match_parent"
     tools:context=".ResActivity">
 
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="잔여 좌석수 :                  총 좌석수:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="410dp"
+        android:id="@+id/toolbar5"
+        android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#02146A"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="좌석 예약"
-        app:titleMargin="5dp"
+        app:title="좌석안내"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="100dp" />
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="oneA"
+        android:text=" 제 1열람실A"
+        android:textSize="35dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="2"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="100dp" />
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="잔여 좌석수 :                  총 좌석수:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="3"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="100dp" />
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="oneB"
+        android:text=" 제1열람실B"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="4"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="100dp" />
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="잔여 좌석수 :                  총 좌석수:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="5"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="100dp" />
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="three"
+        android:text=" 제 3열람실"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="6"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="100dp" />
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="four"
+        android:text=" 제 4열람실"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="7"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="150dp" />
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="잔여 좌석수 :                  총 좌석수:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="8"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="150dp" />
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="five"
+        android:text=" 제 5열람실"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="9"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="150dp" />
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="10"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="150dp" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="11"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="150dp" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="12"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="150dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="13"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="250dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="14"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="250dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="15"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="250dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="16"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="250dp" />
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="17"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="250dp" />
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="18"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="250dp" />
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="19"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="300dp" />
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="20"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="300dp" />
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="21"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="300dp" />
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="22"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="300dp" />
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="23"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="300dp" />
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="24"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="300dp" />
-
-
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="잔여 좌석수 :                  총 좌석수:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
