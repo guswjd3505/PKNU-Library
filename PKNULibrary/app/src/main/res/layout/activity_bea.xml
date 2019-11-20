@@ -50,4 +50,13 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_bea" />
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수신강도"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bea"
+        tools:layout_editor_absoluteX="180dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
