@@ -47,11 +47,13 @@
                 android:text="2" />
 
             <Button
+                android:id="@+id/btn3"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="3" />
 
             <Button
+                android:id="@+id/btn4"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="4" />

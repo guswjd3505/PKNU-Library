@@ -1,12 +1,18 @@
 package com.example.pknulibrary;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import android.app.Activity;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.text.format.DateFormat;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,8 +31,10 @@ import static android.graphics.BlendMode.COLOR;
 public class oneA extends AppCompatActivity {
 
     TextView display, text;
-    Button btn1,btn2;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13,
+            btn14, btn15, btn16, btn17, btn18,btn19,btn20,btn21,btn22,btn23,btn24;
 
+    int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +46,8 @@ public class oneA extends AppCompatActivity {
 
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
+        btn3 = (Button) findViewById(R.id.btn3);
+        btn4 = (Button) findViewById(R.id.btn4);
 
         final String btn2text = btn2.getText().toString();
 
@@ -65,12 +75,17 @@ public class oneA extends AppCompatActivity {
                 intent.putExtra("name",display.getText().toString());
                 intent.putExtra("text1",text.getText().toString());
 
+//                // 색 변경
+//
+//                if(arg1.getAction() == MotionEvent.ACTION_DOWN)
+//                {
+//                    arg0.setBackgroundColor(btn1.getResources().getColor(R.color.material_blue_grey_800));
+//                }
                 // 색 변경
+                btn1.setBackgroundColor(Color.RED);
 
-                if(arg1.getAction() == MotionEvent.ACTION_DOWN)
-                {
-                    arg0.setBackgroundColor(btn1.getResources().getColor(R.color.material_blue_grey_800));
-                }
+                // 알림
+                createNotification();
 
                 return true;
             }
@@ -140,5 +155,30 @@ public class oneA extends AppCompatActivity {
 
         }
     }
+    private void createNotification () {
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "default");
+
+        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setContentTitle("Beacon PKNU 도서관");
+        builder.setContentText("6시간 남았습니다");
+
+        builder.setColor(Color.RED);
+        // 사용자가 탭을 클릭하면 자동 제거
+        builder.setAutoCancel(true);
+
+        // 알림 표시
+        NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationManager.createNotificationChannel(new NotificationChannel("default", "기본 채널", NotificationManager.IMPORTANCE_DEFAULT));
+            Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            vibrator.vibrate(2000);
+        }
+
+        // id값은
+        // 정의해야하는 각 알림의 고유한 int값
+        notificationManager.notify(1, builder.build());
+    }
+
 
 }
