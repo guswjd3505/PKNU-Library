@@ -48,6 +48,26 @@ public class oneA extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.btn2);
         btn3 = (Button) findViewById(R.id.btn3);
         btn4 = (Button) findViewById(R.id.btn4);
+        btn5 = (Button) findViewById(R.id.btn5);
+        btn6 = (Button) findViewById(R.id.btn6);
+        btn7 = (Button) findViewById(R.id.btn7);
+        btn8 = (Button) findViewById(R.id.btn8);
+        btn9 = (Button) findViewById(R.id.btn9);
+        btn10 = (Button) findViewById(R.id.btn10);
+        btn11= (Button) findViewById(R.id.btn11);
+        btn12= (Button) findViewById(R.id.btn12);
+        btn13= (Button) findViewById(R.id.btn13);
+        btn14 = (Button) findViewById(R.id.btn14);
+        btn15 = (Button) findViewById(R.id.btn15);
+        btn16= (Button) findViewById(R.id.btn16);
+        btn17= (Button) findViewById(R.id.btn17);
+        btn18= (Button) findViewById(R.id.btn18);
+        btn19= (Button) findViewById(R.id.btn19);
+        btn20= (Button) findViewById(R.id.btn20);
+        btn21= (Button) findViewById(R.id.btn21);
+        btn22 = (Button) findViewById(R.id.btn22);
+        btn23= (Button) findViewById(R.id.btn23);
+        btn24 = (Button) findViewById(R.id.btn24);
 
         final String btn2text = btn2.getText().toString();
 
@@ -75,12 +95,6 @@ public class oneA extends AppCompatActivity {
                 intent.putExtra("name",display.getText().toString());
                 intent.putExtra("text1",text.getText().toString());
 
-//                // 색 변경
-//
-//                if(arg1.getAction() == MotionEvent.ACTION_DOWN)
-//                {
-//                    arg0.setBackgroundColor(btn1.getResources().getColor(R.color.material_blue_grey_800));
-//                }
                 // 색 변경
                 btn1.setBackgroundColor(Color.RED);
 
@@ -95,34 +109,834 @@ public class oneA extends AppCompatActivity {
 
 
         btn2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
             public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn2.getText().toString();
 
-                TimeZone timezone = TimeZone.getTimeZone("Etc/GMT-9");
-                TimeZone.setDefault(timezone);
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
 
-                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm", Locale.KOREA);
-
-                Date current = new Date();
-
-                String btn1text = btn1.getText().toString();
-
-                String mtime = formater.format(current);
-                System.out.println(mtime);
-
-                TimeZone jst = TimeZone.getTimeZone ("JST");
-                Calendar cal = Calendar.getInstance(Locale.KOREA); // 주어진 시간대에 맞게 현재 시각으로 초기화된 GregorianCalender 객체를 반환.// 또는 Calendar now = Calendar.getInstance(Locale.KOREA);
-                System.out.println ( cal.get ( Calendar.YEAR ) + "." + ( cal.get ( Calendar.MONTH ) + 1 ) + "." + cal.get ( Calendar.DATE ) + "." + (cal.get ( Calendar.HOUR_OF_DAY ) +6)+ "." +cal.get ( Calendar.MINUTE ));
-
-                display.setText(mtime+" ~ "+cal.get ( Calendar.YEAR ) + " . " + ( cal.get ( Calendar.MONTH ) + 1 ) + "." + cal.get ( Calendar.DATE ) + "." + (cal.get ( Calendar.HOUR_OF_DAY ) +6)+ ":" +cal.get ( Calendar.MINUTE ));
-                text.setText(" "+btn2text+"번 좌석 사용 중");
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
 
                 Intent intent=new Intent(oneA.this,MyPageActivity.class);
                 intent.putExtra("name",display.getText().toString());
                 intent.putExtra("text1",text.getText().toString());
 
+                // 색 변경
+                btn2.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
                 return true;
             }
+
+
         });
+
+        btn3.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn3.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn3.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn4.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn4.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn4.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn5.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn5.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn5.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn6.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn6.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn6.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn7.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn7.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn7.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn8.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn8.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn8.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn9.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn9.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn9.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn10.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn10.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn10.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn11.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn11.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn11.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn12.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn12.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn12.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn13.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn13.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn13.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn14.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn14.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn14.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn15.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn15.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn15.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn16.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn16.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn16.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn17.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn17.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn17.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn18.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn18.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn18.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn19.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn19.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn19.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn20.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn20.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn20.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn21.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn21.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn21.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn22.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn22.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn22.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn23.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn23.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn23.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+        btn24.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View arg0, MotionEvent arg1) {
+// 시간 나타내는 코드 전부 수정했습니다~ 필요없어 보이는 부분 지우고 물결 뒤에 숫자 한 자리씩 나와서 두자리씩 포매팅 되게 만들었습니다.
+                String btn1text = btn24.getText().toString();
+
+                String thistime = null; //현재 시간 저장할 변수
+                String after6 = null;  //6시간 추가해서 저장할 함수
+                Date current = new Date();   //현재시간 불러오기
+                SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd HH:mm");  //포매팅
+                Calendar cal = Calendar.getInstance();  //cal 이라는 시간 인스턴스 만들어줌
+                cal.setTime(current);  //현재 시간 저장
+
+                thistime = formater.format(cal.getTime()); //현재시간 문자열로 저장
+                cal.add(Calendar.HOUR, 6); //시간에 6시간 추가
+                after6 =formater.format(cal.getTime());; //추가한 걸 문자열로 저장
+                display.setText(thistime+ "~" + after6); //시간 붙여서 출력
+                text.setText(" "+btn1text+"번 좌석 사용 중");
+                //다른 버튼 눌렀을 때도 이 시간 포맷으로 수정해야 함
+
+                Intent intent=new Intent(oneA.this,MyPageActivity.class);
+                intent.putExtra("name",display.getText().toString());
+                intent.putExtra("text1",text.getText().toString());
+
+                // 색 변경
+                btn24.setBackgroundColor(Color.RED);
+
+                // 알림
+                createNotification();
+
+                return true;
+            }
+
+
+        });
+
+
     }
 
     @Override

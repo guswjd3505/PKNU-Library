@@ -20,43 +20,53 @@
         app:titleMargin="5dp"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1" />
 
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="205dp"
+        android:layout_height="226dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="90dp"
+        android:src="@drawable/beacon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
     <Button
         android:id="@+id/btn_bea"
-        android:layout_width="249dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="140dp"
-        android:text="연결"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="160dp"
+        android:text="connect"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="290dp"
-        android:layout_height="256dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/beacon"
-        tools:layout_editor_absoluteY="96dp" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:text="블루투스 연결을 켠 후에 비콘에 연결해 주세요. 블루투스 기능을 켜지 않으면 비콘에 연결할 수 없습니다."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_bea" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
     <TextView
         android:id="@+id/tvId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="158dp"
         android:text="수신강도"
-        app:layout_constraintBottom_toTopOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/btn_bea"
-        tools:layout_editor_absoluteX="180dp" />
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bea" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="44dp"
+        android:text="블루투스 연결을 켠 후에 비콘에 연결해 주세요.\n블루투스 기능을 켜지 않으면 비콘에 연결할 수 없습니다."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvId" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

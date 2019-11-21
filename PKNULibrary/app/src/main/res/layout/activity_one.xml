@@ -7,7 +7,7 @@
     tools:context=".oneA">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar6"
+        android:id="@+id/toolbar634"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#02146A"
@@ -58,11 +58,13 @@
                 android:text="4" />
 
             <Button
+                android:id="@+id/btn5"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="5" />
 
             <Button
+                android:id="@+id/btn6"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="6" />
@@ -74,31 +76,37 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/btn7"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="7" />
 
             <Button
+                android:id="@+id/btn8"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="8" />
 
             <Button
+                android:id="@+id/btn9"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="9" />
 
             <Button
+                android:id="@+id/btn10"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="10" />
 
             <Button
+                android:id="@+id/btn11"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="11" />
 
             <Button
+                android:id="@+id/btn12"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="12" />
@@ -114,31 +122,37 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/btn13"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="13" />
 
             <Button
+                android:id="@+id/btn14"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="14" />
 
             <Button
+                android:id="@+id/btn15"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="15" />
 
             <Button
+                android:id="@+id/btn16"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="16" />
 
             <Button
+                android:id="@+id/btn17"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="17" />
 
             <Button
+                android:id="@+id/btn18"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="18" />
@@ -149,31 +163,37 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/btn19"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="19" />
 
             <Button
+                android:id="@+id/btn20"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="20" />
 
             <Button
+                android:id="@+id/btn21"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="21" />
 
             <Button
+                android:id="@+id/btn22"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="22" />
 
             <Button
+                android:id="@+id/btn23"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="23" />
 
             <Button
+                android:id="@+id/btn24"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="24" />

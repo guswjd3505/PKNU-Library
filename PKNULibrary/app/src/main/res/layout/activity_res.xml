@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ResActivity">
 
-    <TextView
-        android:id="@+id/three"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="잔여 좌석수 :                  총 좌석수: 24"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar5"
         android:layout_width="match_parent"
@@ -31,6 +22,7 @@
         android:id="@+id/textView23"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:onClick="oneA"
         android:text="   제 1열람실A"
         android:textSize="35dp"
@@ -39,139 +31,103 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
     <TextView
-        android:id="@+id/oneA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="잔여 좌석수 :                  총 좌석수: 24"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-    <TextView
         android:id="@+id/textView25"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:onClick="oneB"
         android:text="   제1열람실B"
         android:textSize="35dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oneA" />
-
-    <TextView
-        android:id="@+id/oneB"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="잔여 좌석수 :                  총 좌석수: 24"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar7" />
 
     <TextView
         android:id="@+id/textView27"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:onClick="three"
         android:text="   제 3열람실"
         android:textSize="35dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oneB" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar8" />
 
     <TextView
         android:id="@+id/textView29"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:onClick="four"
         android:text="   제 4열람실"
         android:textSize="35dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/three" />
-
-    <TextView
-        android:id="@+id/four"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="잔여 좌석수 :                  총 좌석수: 24"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar9" />
 
     <TextView
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:onClick="five"
         android:text="   제 5열람실"
         android:textSize="35dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/four" />
-
-    <TextView
-        android:id="@+id/five"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="잔여 좌석수 :                  총 좌석수: 24"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar7"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12dp"
         android:background="#02146A"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oneA" />
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar8"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12dp"
         android:background="#02146A"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oneB" />
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar9"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12dp"
         android:background="#02146A"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/three" />
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar10"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12dp"
         android:background="#02146A"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/four" />
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar11"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12dp"
         android:background="#02146A"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/five" />
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

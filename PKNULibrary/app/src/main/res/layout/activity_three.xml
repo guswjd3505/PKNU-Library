@@ -7,7 +7,7 @@
     tools:context=".three">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar6"
+        android:id="@+id/toolbar634"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#02146A"
@@ -37,7 +37,6 @@
                 android:id="@+id/btn1"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
-                android:onClick="btn1"
                 android:text="1" />
 
             <Button
@@ -47,21 +46,25 @@
                 android:text="2" />
 
             <Button
+                android:id="@+id/btn3"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="3" />
 
             <Button
+                android:id="@+id/btn4"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="4" />
 
             <Button
+                android:id="@+id/btn5"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="5" />
 
             <Button
+                android:id="@+id/btn6"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="6" />
@@ -73,31 +76,37 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/btn7"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="7" />
 
             <Button
+                android:id="@+id/btn8"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="8" />
 
             <Button
+                android:id="@+id/btn9"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="9" />
 
             <Button
+                android:id="@+id/btn10"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="10" />
 
             <Button
+                android:id="@+id/btn11"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="11" />
 
             <Button
+                android:id="@+id/btn12"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="12" />
@@ -113,31 +122,37 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/btn13"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="13" />
 
             <Button
+                android:id="@+id/btn14"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="14" />
 
             <Button
+                android:id="@+id/btn15"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="15" />
 
             <Button
+                android:id="@+id/btn16"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="16" />
 
             <Button
+                android:id="@+id/btn17"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="17" />
 
             <Button
+                android:id="@+id/btn18"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="18" />
@@ -148,31 +163,37 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/btn19"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="19" />
 
             <Button
+                android:id="@+id/btn20"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="20" />
 
             <Button
+                android:id="@+id/btn21"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="21" />
 
             <Button
+                android:id="@+id/btn22"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="22" />
 
             <Button
+                android:id="@+id/btn23"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="23" />
 
             <Button
+                android:id="@+id/btn24"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
                 android:text="24" />
@@ -214,7 +235,7 @@
 
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/red"
         android:layout_width="113dp"
         android:layout_height="41dp"
         android:layout_marginStart="7dp"
@@ -236,7 +257,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/yellow"
         android:layout_width="114dp"
         android:layout_height="45dp"
         android:layout_marginStart="7dp"
@@ -246,7 +267,29 @@
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="29dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tv1"
+        app:layout_constraintTop_toBottomOf="@+id/yellow" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
