@@ -973,7 +973,7 @@ public class four extends AppCompatActivity {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "default");
 
-        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setSmallIcon(R.drawable.mark1);
         builder.setContentTitle("Beacon PKNU 도서관");
         builder.setContentText("6시간 남았습니다");
 
