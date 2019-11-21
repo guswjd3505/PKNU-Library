@@ -70,7 +70,7 @@ public class MyPageActivity extends AppCompatActivity {
 
         empty.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View arg0, MotionEvent arg1) {
-
+empty.setText("자리비움해제");
                 return true;
             }
         });
